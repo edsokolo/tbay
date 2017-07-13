@@ -219,3 +219,381 @@ SELECT guitar.id AS guitar_id, guitar.name AS guitar_name, guitar.manufacturer_i
 FROM guitar 
 WHERE %(param_1)s = guitar.manufacturer_id
 {'param_1': 1}
+(Pizza|pizza) _configure_property(toppings, RelationshipProperty)
+(Pizza|pizza) _configure_property(id, Column)
+(Pizza|pizza) _configure_property(name, Column)
+(Pizza|pizza) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<pizza>, primary_key=True, nullable=False)])
+(Pizza|pizza) constructed
+(Topping|topping) _configure_property(id, Column)
+(Topping|topping) _configure_property(name, Column)
+(Topping|topping) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<topping>, primary_key=True, nullable=False)])
+(Topping|topping) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza_topping_association'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'topping'}
+
+CREATE TABLE pizza (
+	id SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+{}
+COMMIT
+
+CREATE TABLE topping (
+	id SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+{}
+COMMIT
+
+CREATE TABLE pizza_topping_association (
+	pizza_id INTEGER, 
+	topping_id INTEGER, 
+	FOREIGN KEY(pizza_id) REFERENCES pizza (id), 
+	FOREIGN KEY(topping_id) REFERENCES topping (id)
+)
+
+
+{}
+COMMIT
+(Pizza|pizza) _post_configure_properties() started
+(Pizza|pizza) initialize prop toppings
+Pizza.toppings setup primary join pizza.id = pizza_topping_association.pizza_id
+Pizza.toppings setup secondary join topping.id = pizza_topping_association.topping_id
+Pizza.toppings synchronize pairs [(pizza.id => pizza_topping_association.pizza_id)]
+Pizza.toppings secondary synchronize pairs [(topping.id => pizza_topping_association.topping_id)]
+Pizza.toppings local/remote pairs [(pizza.id / pizza_topping_association.pizza_id),(topping.id / pizza_topping_association.topping_id)]
+Pizza.toppings remote columns [pizza_topping_association.pizza_id,pizza_topping_association.topping_id]
+Pizza.toppings local columns [pizza.id]
+Pizza.toppings relationship direction symbol('MANYTOMANY')
+(Topping|topping) _configure_property(pizzas, RelationshipProperty)
+Topping.pizzas setup primary join topping.id = pizza_topping_association.topping_id
+Topping.pizzas setup secondary join pizza.id = pizza_topping_association.pizza_id
+Topping.pizzas synchronize pairs [(topping.id => pizza_topping_association.topping_id)]
+Topping.pizzas secondary synchronize pairs [(pizza.id => pizza_topping_association.pizza_id)]
+Topping.pizzas local/remote pairs [(topping.id / pizza_topping_association.topping_id),(pizza.id / pizza_topping_association.pizza_id)]
+Topping.pizzas remote columns [pizza_topping_association.pizza_id,pizza_topping_association.topping_id]
+Topping.pizzas local columns [topping.id]
+Topping.pizzas relationship direction symbol('MANYTOMANY')
+Topping.pizzas lazy loading clause :param_1 = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+Topping.pizzas lazy loading clause :param_1 = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+Pizza.toppings lazy loading clause :param_1 = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+Pizza.toppings lazy loading clause :param_1 = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+(Pizza|pizza) initialize prop id
+(Pizza|pizza) initialize prop name
+(Pizza|pizza) _post_configure_properties() complete
+(Topping|topping) _post_configure_properties() started
+(Topping|topping) initialize prop id
+(Topping|topping) initialize prop name
+(Topping|topping) initialize prop pizzas
+(Topping|topping) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO pizza (name) VALUES (%(name)s) RETURNING pizza.id
+{'name': 'Vampire Weekend'}
+INSERT INTO pizza (name) VALUES (%(name)s) RETURNING pizza.id
+{'name': 'Spicy Pepper'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Garlic'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Chill'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Peppers'}
+INSERT INTO pizza_topping_association (pizza_id, topping_id) VALUES (%(pizza_id)s, %(topping_id)s)
+({'topping_id': 2, 'pizza_id': 2}, {'topping_id': 2, 'pizza_id': 1}, {'topping_id': 1, 'pizza_id': 1}, {'topping_id': 3, 'pizza_id': 2})
+COMMIT
+BEGIN (implicit)
+SELECT pizza.id AS pizza_id, pizza.name AS pizza_name 
+FROM pizza 
+WHERE pizza.id = %(param_1)s
+{'param_1': 1}
+SELECT topping.id AS topping_id, topping.name AS topping_name 
+FROM topping, pizza_topping_association 
+WHERE %(param_1)s = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+{'param_1': 1}
+(Pizza|pizza) _configure_property(toppings, RelationshipProperty)
+(Pizza|pizza) _configure_property(id, Column)
+(Pizza|pizza) _configure_property(name, Column)
+(Pizza|pizza) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<pizza>, primary_key=True, nullable=False)])
+(Pizza|pizza) constructed
+(Topping|topping) _configure_property(id, Column)
+(Topping|topping) _configure_property(name, Column)
+(Topping|topping) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<topping>, primary_key=True, nullable=False)])
+(Topping|topping) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza_topping_association'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'topping'}
+(Pizza|pizza) _post_configure_properties() started
+(Pizza|pizza) initialize prop toppings
+Pizza.toppings setup primary join pizza.id = pizza_topping_association.pizza_id
+Pizza.toppings setup secondary join topping.id = pizza_topping_association.topping_id
+Pizza.toppings synchronize pairs [(pizza.id => pizza_topping_association.pizza_id)]
+Pizza.toppings secondary synchronize pairs [(topping.id => pizza_topping_association.topping_id)]
+Pizza.toppings local/remote pairs [(pizza.id / pizza_topping_association.pizza_id),(topping.id / pizza_topping_association.topping_id)]
+Pizza.toppings remote columns [pizza_topping_association.pizza_id,pizza_topping_association.topping_id]
+Pizza.toppings local columns [pizza.id]
+Pizza.toppings relationship direction symbol('MANYTOMANY')
+(Topping|topping) _configure_property(pizzas, RelationshipProperty)
+Topping.pizzas setup primary join topping.id = pizza_topping_association.topping_id
+Topping.pizzas setup secondary join pizza.id = pizza_topping_association.pizza_id
+Topping.pizzas synchronize pairs [(topping.id => pizza_topping_association.topping_id)]
+Topping.pizzas secondary synchronize pairs [(pizza.id => pizza_topping_association.pizza_id)]
+Topping.pizzas local/remote pairs [(topping.id / pizza_topping_association.topping_id),(pizza.id / pizza_topping_association.pizza_id)]
+Topping.pizzas remote columns [pizza_topping_association.pizza_id,pizza_topping_association.topping_id]
+Topping.pizzas local columns [topping.id]
+Topping.pizzas relationship direction symbol('MANYTOMANY')
+Topping.pizzas lazy loading clause :param_1 = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+Topping.pizzas lazy loading clause :param_1 = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+Pizza.toppings lazy loading clause :param_1 = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+Pizza.toppings lazy loading clause :param_1 = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+(Pizza|pizza) initialize prop id
+(Pizza|pizza) initialize prop name
+(Pizza|pizza) _post_configure_properties() complete
+(Topping|topping) _post_configure_properties() started
+(Topping|topping) initialize prop id
+(Topping|topping) initialize prop name
+(Topping|topping) initialize prop pizzas
+(Topping|topping) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO pizza (name) VALUES (%(name)s) RETURNING pizza.id
+{'name': 'Vampire Weekend'}
+INSERT INTO pizza (name) VALUES (%(name)s) RETURNING pizza.id
+{'name': 'Spicy Pepper'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Garlic'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Chill'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Peppers'}
+INSERT INTO pizza_topping_association (pizza_id, topping_id) VALUES (%(pizza_id)s, %(topping_id)s)
+({'topping_id': 4, 'pizza_id': 3}, {'topping_id': 5, 'pizza_id': 3}, {'topping_id': 6, 'pizza_id': 4}, {'topping_id': 5, 'pizza_id': 4})
+COMMIT
+BEGIN (implicit)
+SELECT pizza.id AS pizza_id, pizza.name AS pizza_name 
+FROM pizza 
+WHERE pizza.id = %(param_1)s
+{'param_1': 3}
+SELECT topping.id AS topping_id, topping.name AS topping_name 
+FROM topping, pizza_topping_association 
+WHERE %(param_1)s = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+{'param_1': 3}
+SELECT pizza.id AS pizza_id, pizza.name AS pizza_name 
+FROM pizza, pizza_topping_association 
+WHERE %(param_1)s = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+{'param_1': 5}
+(Pizza|pizza) _configure_property(toppings, RelationshipProperty)
+(Pizza|pizza) _configure_property(id, Column)
+(Pizza|pizza) _configure_property(name, Column)
+(Pizza|pizza) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<pizza>, primary_key=True, nullable=False)])
+(Pizza|pizza) constructed
+(Topping|topping) _configure_property(id, Column)
+(Topping|topping) _configure_property(name, Column)
+(Topping|topping) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<topping>, primary_key=True, nullable=False)])
+(Topping|topping) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza_topping_association'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'topping'}
+(Pizza|pizza) _post_configure_properties() started
+(Pizza|pizza) initialize prop toppings
+(Pizza|pizza) _configure_property(toppings, RelationshipProperty)
+(Pizza|pizza) _configure_property(id, Column)
+(Pizza|pizza) _configure_property(name, Column)
+(Pizza|pizza) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<pizza>, primary_key=True, nullable=False)])
+(Pizza|pizza) constructed
+(Topping|topping) _configure_property(id, Column)
+(Topping|topping) _configure_property(name, Column)
+(Topping|topping) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<topping>, primary_key=True, nullable=False)])
+(Topping|topping) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza_topping_association'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'topping'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'pizza'}
+(Pizza|pizza) _post_configure_properties() started
+(Pizza|pizza) initialize prop toppings
+Pizza.toppings setup primary join pizza.id = pizza_topping_association.pizza_id
+Pizza.toppings setup secondary join topping.id = pizza_topping_association.topping_id
+Pizza.toppings synchronize pairs [(pizza.id => pizza_topping_association.pizza_id)]
+Pizza.toppings secondary synchronize pairs [(topping.id => pizza_topping_association.topping_id)]
+Pizza.toppings local/remote pairs [(pizza.id / pizza_topping_association.pizza_id),(topping.id / pizza_topping_association.topping_id)]
+Pizza.toppings remote columns [pizza_topping_association.pizza_id,pizza_topping_association.topping_id]
+Pizza.toppings local columns [pizza.id]
+Pizza.toppings relationship direction symbol('MANYTOMANY')
+(Topping|topping) _configure_property(pizzas, RelationshipProperty)
+Topping.pizzas setup primary join topping.id = pizza_topping_association.topping_id
+Topping.pizzas setup secondary join pizza.id = pizza_topping_association.pizza_id
+Topping.pizzas synchronize pairs [(topping.id => pizza_topping_association.topping_id)]
+Topping.pizzas secondary synchronize pairs [(pizza.id => pizza_topping_association.pizza_id)]
+Topping.pizzas local/remote pairs [(topping.id / pizza_topping_association.topping_id),(pizza.id / pizza_topping_association.pizza_id)]
+Topping.pizzas remote columns [pizza_topping_association.pizza_id,pizza_topping_association.topping_id]
+Topping.pizzas local columns [topping.id]
+Topping.pizzas relationship direction symbol('MANYTOMANY')
+Topping.pizzas lazy loading clause :param_1 = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+Topping.pizzas lazy loading clause :param_1 = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+Pizza.toppings lazy loading clause :param_1 = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+Pizza.toppings lazy loading clause :param_1 = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+(Pizza|pizza) initialize prop id
+(Pizza|pizza) initialize prop name
+(Pizza|pizza) _post_configure_properties() complete
+(Topping|topping) _post_configure_properties() started
+(Topping|topping) initialize prop id
+(Topping|topping) initialize prop name
+(Topping|topping) initialize prop pizzas
+(Topping|topping) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO pizza (name) VALUES (%(name)s) RETURNING pizza.id
+{'name': 'Vampire Weekend'}
+INSERT INTO pizza (name) VALUES (%(name)s) RETURNING pizza.id
+{'name': 'Spicy Pepper'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Garlic'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Chill'}
+INSERT INTO topping (name) VALUES (%(name)s) RETURNING topping.id
+{'name': 'Peppers'}
+INSERT INTO pizza_topping_association (pizza_id, topping_id) VALUES (%(pizza_id)s, %(topping_id)s)
+({'pizza_id': 5, 'topping_id': 7}, {'pizza_id': 5, 'topping_id': 8}, {'pizza_id': 6, 'topping_id': 9}, {'pizza_id': 6, 'topping_id': 8})
+COMMIT
+BEGIN (implicit)
+SELECT pizza.id AS pizza_id, pizza.name AS pizza_name 
+FROM pizza 
+WHERE pizza.id = %(param_1)s
+{'param_1': 5}
+SELECT topping.id AS topping_id, topping.name AS topping_name 
+FROM topping, pizza_topping_association 
+WHERE %(param_1)s = pizza_topping_association.pizza_id AND topping.id = pizza_topping_association.topping_id
+{'param_1': 5}
+SELECT pizza.id AS pizza_id, pizza.name AS pizza_name 
+FROM pizza, pizza_topping_association 
+WHERE %(param_1)s = pizza_topping_association.topping_id AND pizza.id = pizza_topping_association.pizza_id
+{'param_1': 8}
+(Manufacturer|manufacturer) _configure_property(guitars, RelationshipProperty)
+(Manufacturer|manufacturer) _configure_property(id, Column)
+(Manufacturer|manufacturer) _configure_property(name, Column)
+(Manufacturer|manufacturer) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<manufacturer>, primary_key=True, nullable=False)])
+(Manufacturer|manufacturer) constructed
+(Guitar|guitar) _configure_property(id, Column)
+(Guitar|guitar) _configure_property(name, Column)
+(Guitar|guitar) _configure_property(manufacturer_id, Column)
+(Guitar|guitar) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<guitar>, primary_key=True, nullable=False)])
+(Guitar|guitar) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'manufacturer'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'guitar'}
+(Manufacturer|manufacturer) _post_configure_properties() started
+(Manufacturer|manufacturer) initialize prop guitars
+Manufacturer.guitars setup primary join manufacturer.id = guitar.manufacturer_id
+Manufacturer.guitars setup secondary join None
+Manufacturer.guitars synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Manufacturer.guitars secondary synchronize pairs []
+Manufacturer.guitars local/remote pairs [(manufacturer.id / guitar.manufacturer_id)]
+Manufacturer.guitars remote columns [guitar.manufacturer_id]
+Manufacturer.guitars local columns [manufacturer.id]
+Manufacturer.guitars relationship direction symbol('ONETOMANY')
+(Guitar|guitar) _configure_property(manufacturer, RelationshipProperty)
+Guitar.manufacturer setup primary join manufacturer.id = guitar.manufacturer_id
+Guitar.manufacturer setup secondary join None
+Guitar.manufacturer synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Guitar.manufacturer secondary synchronize pairs []
+Guitar.manufacturer local/remote pairs [(guitar.manufacturer_id / manufacturer.id)]
+Guitar.manufacturer remote columns [manufacturer.id]
+Guitar.manufacturer local columns [guitar.manufacturer_id]
+Guitar.manufacturer relationship direction symbol('MANYTOONE')
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+(Manufacturer|manufacturer) initialize prop id
+(Manufacturer|manufacturer) initialize prop name
+(Manufacturer|manufacturer) _post_configure_properties() complete
+(Guitar|guitar) _post_configure_properties() started
+(Guitar|guitar) initialize prop id
+(Guitar|guitar) initialize prop name
+(Guitar|guitar) initialize prop manufacturer_id
+(Guitar|guitar) initialize prop manufacturer
+(Guitar|guitar) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO manufacturer (name) VALUES (%(name)s) RETURNING manufacturer.id
+{'name': 'Fender'}
+INSERT INTO guitar (name, manufacturer_id) VALUES (%(name)s, %(manufacturer_id)s) RETURNING guitar.id
+{'manufacturer_id': 2, 'name': 'Stratocaster'}
+INSERT INTO guitar (name, manufacturer_id) VALUES (%(name)s, %(manufacturer_id)s) RETURNING guitar.id
+{'manufacturer_id': 2, 'name': 'Telecaster'}
+COMMIT
+BEGIN (implicit)
+SELECT manufacturer.id AS manufacturer_id, manufacturer.name AS manufacturer_name 
+FROM manufacturer 
+WHERE manufacturer.id = %(param_1)s
+{'param_1': 2}
+SELECT guitar.id AS guitar_id, guitar.name AS guitar_name, guitar.manufacturer_id AS guitar_manufacturer_id 
+FROM guitar 
+WHERE %(param_1)s = guitar.manufacturer_id
+{'param_1': 2}
