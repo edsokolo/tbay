@@ -1,0 +1,786 @@
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO users (username, password) VALUES (%(username)s, %(password)s) RETURNING users.id
+{'username': 'bknowles', 'password': 'uhuohohohohonana'}
+COMMIT
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO users (username, password) VALUES (%(username)s, %(password)s) RETURNING users.id
+{'password': 'uhuohohohohonana', 'username': 'bknowles'}
+COMMIT
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO users (username, password) VALUES (%(username)s, %(password)s) RETURNING users.id
+{'password': 'bingbong', 'username': 'steve'}
+COMMIT
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+BEGIN (implicit)
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users
+{}
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+ LIMIT %(param_1)s
+{'param_1': 1}
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.id = %(param_1)s
+{'param_1': 0}
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.id = %(param_1)s
+{'param_1': 2}
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.id = %(param_1)s
+{'param_1': 3}
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.id = %(param_1)s
+{'param_1': 4}
+SELECT users.username AS users_username 
+FROM users
+{}
+SELECT users.username AS users_username 
+FROM users ORDER BY users.username
+{}
+SELECT users.username AS users_username 
+FROM users ORDER BY users.username 
+ LIMIT %(param_1)s
+{'param_1': 1}
+SELECT users.username AS users_username 
+FROM users ORDER BY users.username
+{}
+SELECT items.description AS items_description 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'baseball'}
+INSERT INTO items (name, description, start_time) VALUES (%(name)s, %(description)s, %(start_time)s) RETURNING items.id
+{'description': "It's a friggin' baseball yo", 'start_time': datetime.datetime(2017, 7, 12, 3, 46, 40, 928586), 'name': 'baseball'}
+COMMIT
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO items (name, description, start_time) VALUES (%(name)s, %(description)s, %(start_time)s) RETURNING items.id
+{'description': 'A much better type of ball', 'start_time': datetime.datetime(2017, 7, 12, 3, 47, 54, 694364), 'name': 'Basketball'}
+COMMIT
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+BEGIN (implicit)
+SELECT items.description AS items_description 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'baseball'}
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.id = %(param_1)s
+{'param_1': 1}
+SELECT users.username AS users_username 
+FROM users
+{}
+SELECT users.username AS users_username 
+FROM users
+{}
+SELECT users.username AS users_username, users.password AS users_password 
+FROM users
+{}
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+ LIMIT %(param_1)s
+{'param_1': 1}
+UPDATE users SET username=%(username)s WHERE users.id = %(users_id)s
+{'users_id': 1, 'username': 'solange'}
+COMMIT
+BEGIN (implicit)
+SELECT users.username AS users_username 
+FROM users
+{}
+SELECT users.username AS users_username 
+FROM users 
+ LIMIT %(param_1)s
+{'param_1': 1}
+SELECT users.username AS users_username, users.password AS users_password 
+FROM users 
+ LIMIT %(param_1)s
+{'param_1': 1}
+SELECT users.username AS users_username, users.password AS users_password 
+FROM users 
+ LIMIT %(param_1)s
+{'param_1': 1}
+SELECT users.username AS users_username, users.password AS users_password 
+FROM users
+{}
+SELECT items.name AS items_name 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'Baseball'}
+SELECT items.name AS items_name 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'baseball'}
+SELECT items.name AS items_name 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'baseball'}
+SELECT items.id AS items_id, items.name AS items_name, items.description AS items_description, items.start_time AS items_start_time 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'baseball'}
+SELECT items.id AS items_id, items.name AS items_name, items.description AS items_description, items.start_time AS items_start_time 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'baseball'}
+UPDATE items SET name=%(name)s WHERE items.id = %(items_id)s
+{'name': 'football', 'items_id': 1}
+COMMIT
+BEGIN (implicit)
+SELECT items.id AS items_id, items.name AS items_name, items.description AS items_description, items.start_time AS items_start_time 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'baseball'}
+SELECT items.id AS items_id, items.name AS items_name, items.description AS items_description, items.start_time AS items_start_time 
+FROM items 
+WHERE items.name = %(name_1)s
+{'name_1': 'football'}
+UPDATE items SET description=%(description)s WHERE items.id = %(items_id)s
+{'items_id': 1, 'description': 'A ball made out of feet'}
+COMMIT
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+BEGIN (implicit)
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+ LIMIT %(param_1)s
+{'param_1': 1}
+DELETE FROM users WHERE users.id = %(id)s
+{'id': 2}
+COMMIT
+(Item|items) _configure_property(id, Column)
+(Item|items) _configure_property(name, Column)
+(Item|items) _configure_property(description, Column)
+(Item|items) _configure_property(start_time, Column)
+(Item|items) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<items>, primary_key=True, nullable=False)])
+(Item|items) constructed
+(User|users) _configure_property(id, Column)
+(User|users) _configure_property(username, Column)
+(User|users) _configure_property(password, Column)
+(User|users) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<users>, primary_key=True, nullable=False)])
+(User|users) constructed
+(Bid|bids) _configure_property(id, Column)
+(Bid|bids) _configure_property(price, Column)
+(Bid|bids) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<bids>, primary_key=True, nullable=False)])
+(Bid|bids) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'items'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'bids'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'users'}
+(Item|items) _post_configure_properties() started
+(Item|items) initialize prop id
+(Item|items) initialize prop name
+(Item|items) initialize prop description
+(Item|items) initialize prop start_time
+(Item|items) _post_configure_properties() complete
+(Bid|bids) _post_configure_properties() started
+(Bid|bids) initialize prop id
+(Bid|bids) initialize prop price
+(Bid|bids) _post_configure_properties() complete
+(User|users) _post_configure_properties() started
+(User|users) initialize prop id
+(User|users) initialize prop username
+(User|users) initialize prop password
+(User|users) _post_configure_properties() complete
+BEGIN (implicit)
+SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users
+{}
+DELETE FROM users WHERE users.id = %(id)s
+({'id': 1}, {'id': 3})
+COMMIT
+BEGIN (implicit)
+SELECT items.id AS items_id, items.name AS items_name, items.description AS items_description, items.start_time AS items_start_time 
+FROM items
+{}
+DELETE FROM items WHERE items.id = %(id)s
+({'id': 1}, {'id': 2})
+COMMIT
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK

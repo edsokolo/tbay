@@ -1,0 +1,221 @@
+(Manufacturer|manufacturer) _configure_property(guitars, RelationshipProperty)
+(Manufacturer|manufacturer) _configure_property(id, Column)
+(Manufacturer|manufacturer) _configure_property(name, Column)
+(Manufacturer|manufacturer) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<manufacturer>, primary_key=True, nullable=False)])
+(Manufacturer|manufacturer) constructed
+(Manufacturer|manufacturer) _configure_property(guitars, RelationshipProperty)
+(Manufacturer|manufacturer) _configure_property(id, Column)
+(Manufacturer|manufacturer) _configure_property(name, Column)
+(Manufacturer|manufacturer) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<manufacturer>, primary_key=True, nullable=False)])
+(Manufacturer|manufacturer) constructed
+(Manufacturer|manufacturer) _configure_property(guitars, RelationshipProperty)
+(Manufacturer|manufacturer) _configure_property(id, Column)
+(Manufacturer|manufacturer) _configure_property(name, Column)
+(Manufacturer|manufacturer) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<manufacturer>, primary_key=True, nullable=False)])
+(Manufacturer|manufacturer) constructed
+(Guitar|guitar) _configure_property(id, Column)
+(Guitar|guitar) _configure_property(name, Column)
+(Guitar|guitar) _configure_property(manufacturer_id, Column)
+(Guitar|guitar) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<guitar>, primary_key=True, nullable=False)])
+(Guitar|guitar) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'guitar'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'manufacturer'}
+
+CREATE TABLE manufacturer (
+	id SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+{}
+COMMIT
+
+CREATE TABLE guitar (
+	id SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	manufacturer_id INTEGER NOT NULL, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(manufacturer_id) REFERENCES manufacturer (id)
+)
+
+
+{}
+COMMIT
+(Guitar|guitar) _post_configure_properties() started
+(Guitar|guitar) initialize prop id
+(Guitar|guitar) initialize prop name
+(Guitar|guitar) initialize prop manufacturer_id
+(Guitar|guitar) _post_configure_properties() complete
+(Manufacturer|manufacturer) _post_configure_properties() started
+(Manufacturer|manufacturer) initialize prop guitars
+Manufacturer.guitars setup primary join manufacturer.id = guitar.manufacturer_id
+Manufacturer.guitars setup secondary join None
+Manufacturer.guitars synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Manufacturer.guitars secondary synchronize pairs []
+Manufacturer.guitars local/remote pairs [(manufacturer.id / guitar.manufacturer_id)]
+Manufacturer.guitars remote columns [guitar.manufacturer_id]
+Manufacturer.guitars local columns [manufacturer.id]
+Manufacturer.guitars relationship direction symbol('ONETOMANY')
+(Guitar|guitar) _configure_property(manufacturer, RelationshipProperty)
+Guitar.manufacturer setup primary join manufacturer.id = guitar.manufacturer_id
+Guitar.manufacturer setup secondary join None
+Guitar.manufacturer synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Guitar.manufacturer secondary synchronize pairs []
+Guitar.manufacturer local/remote pairs [(guitar.manufacturer_id / manufacturer.id)]
+Guitar.manufacturer remote columns [manufacturer.id]
+Guitar.manufacturer local columns [guitar.manufacturer_id]
+Guitar.manufacturer relationship direction symbol('MANYTOONE')
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+(Manufacturer|manufacturer) initialize prop id
+(Manufacturer|manufacturer) initialize prop name
+(Manufacturer|manufacturer) _post_configure_properties() complete
+(Manufacturer|manufacturer) _configure_property(guitars, RelationshipProperty)
+(Manufacturer|manufacturer) _configure_property(id, Column)
+(Manufacturer|manufacturer) _configure_property(name, Column)
+(Manufacturer|manufacturer) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<manufacturer>, primary_key=True, nullable=False)])
+(Manufacturer|manufacturer) constructed
+(Guitar|guitar) _configure_property(id, Column)
+(Guitar|guitar) _configure_property(name, Column)
+(Guitar|guitar) _configure_property(manufacturer_id, Column)
+(Guitar|guitar) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<guitar>, primary_key=True, nullable=False)])
+(Guitar|guitar) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'manufacturer'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'guitar'}
+(Manufacturer|manufacturer) _post_configure_properties() started
+(Manufacturer|manufacturer) initialize prop guitars
+Manufacturer.guitars setup primary join manufacturer.id = guitar.manufacturer_id
+Manufacturer.guitars setup secondary join None
+Manufacturer.guitars synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Manufacturer.guitars secondary synchronize pairs []
+Manufacturer.guitars local/remote pairs [(manufacturer.id / guitar.manufacturer_id)]
+Manufacturer.guitars remote columns [guitar.manufacturer_id]
+Manufacturer.guitars local columns [manufacturer.id]
+Manufacturer.guitars relationship direction symbol('ONETOMANY')
+(Guitar|guitar) _configure_property(manufacturer, RelationshipProperty)
+Guitar.manufacturer setup primary join manufacturer.id = guitar.manufacturer_id
+Guitar.manufacturer setup secondary join None
+Guitar.manufacturer synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Guitar.manufacturer secondary synchronize pairs []
+Guitar.manufacturer local/remote pairs [(guitar.manufacturer_id / manufacturer.id)]
+Guitar.manufacturer remote columns [manufacturer.id]
+Guitar.manufacturer local columns [guitar.manufacturer_id]
+Guitar.manufacturer relationship direction symbol('MANYTOONE')
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+(Manufacturer|manufacturer) initialize prop id
+(Manufacturer|manufacturer) initialize prop name
+(Manufacturer|manufacturer) _post_configure_properties() complete
+(Guitar|guitar) _post_configure_properties() started
+(Guitar|guitar) initialize prop id
+(Guitar|guitar) initialize prop name
+(Guitar|guitar) initialize prop manufacturer_id
+(Guitar|guitar) initialize prop manufacturer
+(Guitar|guitar) _post_configure_properties() complete
+(Manufacturer|manufacturer) _configure_property(guitars, RelationshipProperty)
+(Manufacturer|manufacturer) _configure_property(id, Column)
+(Manufacturer|manufacturer) _configure_property(name, Column)
+(Manufacturer|manufacturer) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<manufacturer>, primary_key=True, nullable=False)])
+(Manufacturer|manufacturer) constructed
+(Guitar|guitar) _configure_property(id, Column)
+(Guitar|guitar) _configure_property(name, Column)
+(Guitar|guitar) _configure_property(manufacturer_id, Column)
+(Guitar|guitar) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<guitar>, primary_key=True, nullable=False)])
+(Guitar|guitar) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'guitar'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'manufacturer'}
+(Guitar|guitar) _post_configure_properties() started
+(Guitar|guitar) initialize prop id
+(Guitar|guitar) initialize prop name
+(Guitar|guitar) initialize prop manufacturer_id
+(Guitar|guitar) _post_configure_properties() complete
+(Manufacturer|manufacturer) _post_configure_properties() started
+(Manufacturer|manufacturer) initialize prop guitars
+Manufacturer.guitars setup primary join manufacturer.id = guitar.manufacturer_id
+Manufacturer.guitars setup secondary join None
+Manufacturer.guitars synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Manufacturer.guitars secondary synchronize pairs []
+Manufacturer.guitars local/remote pairs [(manufacturer.id / guitar.manufacturer_id)]
+Manufacturer.guitars remote columns [guitar.manufacturer_id]
+Manufacturer.guitars local columns [manufacturer.id]
+Manufacturer.guitars relationship direction symbol('ONETOMANY')
+(Guitar|guitar) _configure_property(manufacturer, RelationshipProperty)
+Guitar.manufacturer setup primary join manufacturer.id = guitar.manufacturer_id
+Guitar.manufacturer setup secondary join None
+Guitar.manufacturer synchronize pairs [(manufacturer.id => guitar.manufacturer_id)]
+Guitar.manufacturer secondary synchronize pairs []
+Guitar.manufacturer local/remote pairs [(guitar.manufacturer_id / manufacturer.id)]
+Guitar.manufacturer remote columns [manufacturer.id]
+Guitar.manufacturer local columns [guitar.manufacturer_id]
+Guitar.manufacturer relationship direction symbol('MANYTOONE')
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Guitar.manufacturer lazy loading clause manufacturer.id = :param_1
+Guitar.manufacturer will use query.get() to optimize instance loads
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+Manufacturer.guitars lazy loading clause :param_1 = guitar.manufacturer_id
+(Manufacturer|manufacturer) initialize prop id
+(Manufacturer|manufacturer) initialize prop name
+(Manufacturer|manufacturer) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO manufacturer (name) VALUES (%(name)s) RETURNING manufacturer.id
+{'name': 'Fender'}
+INSERT INTO guitar (name, manufacturer_id) VALUES (%(name)s, %(manufacturer_id)s) RETURNING guitar.id
+{'manufacturer_id': 1, 'name': 'Stratocaster'}
+INSERT INTO guitar (name, manufacturer_id) VALUES (%(name)s, %(manufacturer_id)s) RETURNING guitar.id
+{'manufacturer_id': 1, 'name': 'Telecaster'}
+COMMIT
+BEGIN (implicit)
+SELECT manufacturer.id AS manufacturer_id, manufacturer.name AS manufacturer_name 
+FROM manufacturer 
+WHERE manufacturer.id = %(param_1)s
+{'param_1': 1}
+SELECT guitar.id AS guitar_id, guitar.name AS guitar_name, guitar.manufacturer_id AS guitar_manufacturer_id 
+FROM guitar 
+WHERE %(param_1)s = guitar.manufacturer_id
+{'param_1': 1}

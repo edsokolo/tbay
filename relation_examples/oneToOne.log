@@ -1,0 +1,972 @@
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) initialize prop owner
+(Passport|passport) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+ROLLBACK
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+
+CREATE TABLE person (
+	id SERIAL NOT NULL, 
+	name VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+{}
+COMMIT
+
+CREATE TABLE passport (
+	id SERIAL NOT NULL, 
+	issue_date DATE NOT NULL, 
+	owner_id INTEGER NOT NULL, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(owner_id) REFERENCES person (id)
+)
+
+
+{}
+COMMIT
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'owner_id': 1, 'issue_date': datetime.datetime(2017, 7, 13, 4, 3, 41, 828027)}
+COMMIT
+BEGIN (implicit)
+SELECT person.id AS person_id, person.name AS person_name 
+FROM person 
+WHERE person.id = %(param_1)s
+{'param_1': 1}
+SELECT passport.id AS passport_id, passport.issue_date AS passport_issue_date, passport.owner_id AS passport_owner_id 
+FROM passport 
+WHERE %(param_1)s = passport.owner_id
+{'param_1': 1}
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Steve Butt'}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'issue_date': datetime.datetime(2017, 7, 13, 4, 5, 58, 147893), 'owner_id': 2}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'issue_date': datetime.datetime(2017, 7, 13, 4, 5, 58, 149432), 'owner_id': 3}
+COMMIT
+BEGIN (implicit)
+SELECT person.id AS person_id, person.name AS person_name 
+FROM person 
+WHERE person.id = %(param_1)s
+{'param_1': 2}
+SELECT passport.id AS passport_id, passport.issue_date AS passport_issue_date, passport.owner_id AS passport_owner_id 
+FROM passport 
+WHERE %(param_1)s = passport.owner_id
+{'param_1': 2}
+SELECT person.id AS person_id, person.name AS person_name 
+FROM person 
+WHERE person.id = %(param_1)s
+{'param_1': 3}
+SELECT passport.id AS passport_id, passport.issue_date AS passport_issue_date, passport.owner_id AS passport_owner_id 
+FROM passport 
+WHERE %(param_1)s = passport.owner_id
+{'param_1': 3}
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+(Person|person) _configure_property(psdfsdassport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop psdfsdassport
+Person.psdfsdassport setup primary join person.id = passport.owner_id
+Person.psdfsdassport setup secondary join None
+Person.psdfsdassport synchronize pairs [(person.id => passport.owner_id)]
+Person.psdfsdassport secondary synchronize pairs []
+Person.psdfsdassport local/remote pairs [(person.id / passport.owner_id)]
+Person.psdfsdassport remote columns [passport.owner_id]
+Person.psdfsdassport local columns [person.id]
+Person.psdfsdassport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Steve Butt'}
+COMMIT
+(Person|person) _configure_property(psdfsdassport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop psdfsdassport
+Person.psdfsdassport setup primary join person.id = passport.owner_id
+Person.psdfsdassport setup secondary join None
+Person.psdfsdassport synchronize pairs [(person.id => passport.owner_id)]
+Person.psdfsdassport secondary synchronize pairs []
+Person.psdfsdassport local/remote pairs [(person.id / passport.owner_id)]
+Person.psdfsdassport remote columns [passport.owner_id]
+Person.psdfsdassport local columns [person.id]
+Person.psdfsdassport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Steve Butt'}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'issue_date': datetime.datetime(2017, 7, 13, 4, 10, 11, 447561), 'owner_id': 6}
+COMMIT
+(Person|person) _configure_property(psdfsdassport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop psdfsdassport
+Person.psdfsdassport setup primary join person.id = passport.owner_id
+Person.psdfsdassport setup secondary join None
+Person.psdfsdassport synchronize pairs [(person.id => passport.owner_id)]
+Person.psdfsdassport secondary synchronize pairs []
+Person.psdfsdassport local/remote pairs [(person.id / passport.owner_id)]
+Person.psdfsdassport remote columns [passport.owner_id]
+Person.psdfsdassport local columns [person.id]
+Person.psdfsdassport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Steve Butt'}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'owner_id': 8, 'issue_date': datetime.datetime(2017, 7, 13, 4, 10, 23, 122692)}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'owner_id': 9, 'issue_date': datetime.datetime(2017, 7, 13, 4, 10, 23, 124135)}
+COMMIT
+(Person|person) _configure_property(psdfsdassport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop psdfsdassport
+Person.psdfsdassport setup primary join person.id = passport.owner_id
+Person.psdfsdassport setup secondary join None
+Person.psdfsdassport synchronize pairs [(person.id => passport.owner_id)]
+Person.psdfsdassport secondary synchronize pairs []
+Person.psdfsdassport local/remote pairs [(person.id / passport.owner_id)]
+Person.psdfsdassport remote columns [passport.owner_id]
+Person.psdfsdassport local columns [person.id]
+Person.psdfsdassport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+Person.psdfsdassport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Steve Butt'}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'owner_id': 10, 'issue_date': datetime.datetime(2017, 7, 13, 4, 10, 30, 506405)}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'owner_id': 11, 'issue_date': datetime.datetime(2017, 7, 13, 4, 10, 30, 507838)}
+COMMIT
+BEGIN (implicit)
+SELECT person.id AS person_id, person.name AS person_name 
+FROM person 
+WHERE person.id = %(param_1)s
+{'param_1': 10}
+SELECT passport.id AS passport_id, passport.issue_date AS passport_issue_date, passport.owner_id AS passport_owner_id 
+FROM passport 
+WHERE %(param_1)s = passport.owner_id
+{'param_1': 10}
+SELECT person.id AS person_id, person.name AS person_name 
+FROM person 
+WHERE person.id = %(param_1)s
+{'param_1': 11}
+SELECT passport.id AS passport_id, passport.issue_date AS passport_issue_date, passport.owner_id AS passport_owner_id 
+FROM passport 
+WHERE %(param_1)s = passport.owner_id
+{'param_1': 11}
+(Person|person) _configure_property(passport, RelationshipProperty)
+(Person|person) _configure_property(id, Column)
+(Person|person) _configure_property(name, Column)
+(Person|person) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<person>, primary_key=True, nullable=False)])
+(Person|person) constructed
+(Passport|passport) _configure_property(id, Column)
+(Passport|passport) _configure_property(issue_date, Column)
+(Passport|passport) _configure_property(owner_id, Column)
+(Passport|passport) Identified primary key columns: ColumnSet([Column('id', Integer(), table=<passport>, primary_key=True, nullable=False)])
+(Passport|passport) constructed
+select version()
+{}
+select current_schema()
+{}
+SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+{}
+SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+{}
+show standard_conforming_strings
+{}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'person'}
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+{'name': 'passport'}
+(Passport|passport) _post_configure_properties() started
+(Passport|passport) initialize prop id
+(Passport|passport) initialize prop issue_date
+(Passport|passport) initialize prop owner_id
+(Passport|passport) _post_configure_properties() complete
+(Person|person) _post_configure_properties() started
+(Person|person) initialize prop passport
+Person.passport setup primary join person.id = passport.owner_id
+Person.passport setup secondary join None
+Person.passport synchronize pairs [(person.id => passport.owner_id)]
+Person.passport secondary synchronize pairs []
+Person.passport local/remote pairs [(person.id / passport.owner_id)]
+Person.passport remote columns [passport.owner_id]
+Person.passport local columns [person.id]
+Person.passport relationship direction symbol('ONETOMANY')
+(Passport|passport) _configure_property(owner, RelationshipProperty)
+Passport.owner setup primary join person.id = passport.owner_id
+Passport.owner setup secondary join None
+Passport.owner synchronize pairs [(person.id => passport.owner_id)]
+Passport.owner secondary synchronize pairs []
+Passport.owner local/remote pairs [(passport.owner_id / person.id)]
+Passport.owner remote columns [person.id]
+Passport.owner local columns [passport.owner_id]
+Passport.owner relationship direction symbol('MANYTOONE')
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Passport.owner lazy loading clause person.id = :param_1
+Passport.owner will use query.get() to optimize instance loads
+Person.passport lazy loading clause :param_1 = passport.owner_id
+Person.passport lazy loading clause :param_1 = passport.owner_id
+(Person|person) initialize prop id
+(Person|person) initialize prop name
+(Person|person) _post_configure_properties() complete
+BEGIN (implicit)
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Beyonce Knowles'}
+INSERT INTO person (name) VALUES (%(name)s) RETURNING person.id
+{'name': 'Steve Butt'}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'issue_date': datetime.datetime(2017, 7, 13, 4, 10, 58, 9470), 'owner_id': 12}
+INSERT INTO passport (issue_date, owner_id) VALUES (%(issue_date)s, %(owner_id)s) RETURNING passport.id
+{'issue_date': datetime.datetime(2017, 7, 13, 4, 10, 58, 11311), 'owner_id': 13}
+COMMIT
+BEGIN (implicit)
+SELECT person.id AS person_id, person.name AS person_name 
+FROM person 
+WHERE person.id = %(param_1)s
+{'param_1': 12}
+SELECT passport.id AS passport_id, passport.issue_date AS passport_issue_date, passport.owner_id AS passport_owner_id 
+FROM passport 
+WHERE %(param_1)s = passport.owner_id
+{'param_1': 12}
+SELECT person.id AS person_id, person.name AS person_name 
+FROM person 
+WHERE person.id = %(param_1)s
+{'param_1': 13}
+SELECT passport.id AS passport_id, passport.issue_date AS passport_issue_date, passport.owner_id AS passport_owner_id 
+FROM passport 
+WHERE %(param_1)s = passport.owner_id
+{'param_1': 13}
