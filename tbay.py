@@ -7,7 +7,7 @@ from datetime import datetime
 from sqlalchemy.orm import relationship
 
 
-db_log_file = 'tbay.log'
+db_log_file = 'sentiment_analysis.log'
 db_handler_log_level = logging.INFO
 db_logger_log_level = logging.DEBUG
 
